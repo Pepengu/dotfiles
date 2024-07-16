@@ -1,0 +1,99 @@
+{
+    "layer": "top",
+        "position": "top",
+        "modules-left": [  "hyprland/workspaces", "hyprland/language", "keyboard-state"],
+        "modules-center": ["clock"],
+        "modules-right": ["tray", "bluetooth", "pulseaudio", "network",  "battery" ],
+        "reload_style_on_change":true,
+
+        "hyprland/workspaces": {
+            "format": "<span font='16'>{icon}</span>",
+            "format-icons": {
+                "1": "",
+                "2": "󰈹",
+                "3": "",
+                "4": "󰭹",
+                "5": "󰊗",
+                "default": "" 
+            },
+            "persistent-workspaces": {
+                "*": [ 1, 2, 3, 4, 5]
+            }
+        },
+
+        "hyprland/language": {
+            "format-en": "EN",
+            "format-ru": "RU",
+            "min-length": 1,
+            "tooltip": false
+        },
+
+        "clock": {
+            "locale": "en_US.UTF-8",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format": "<span font='14'>{:%a, %d %b, %H:%M}</span>"
+        },
+
+        "bluetooth": {
+            "format-on": "",
+            "format-off": "",
+            "format-disabled": "󰂲",
+            "format-connected": "󰂴",
+            "format-connected-battery": "{device_battery_percentage}% 󰂴",
+            "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+            "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+            "on-click": "rofi-bluetooth",
+        }, 
+
+        "network": {
+            "format-wifi": " ",
+            "format-ethernet":" ",
+            "format-disconnected": "",
+            "tooltip-format": "{ipaddr}",
+            "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
+            "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
+            "on-click": "nm-connection-editor"
+        },
+
+        "battery": {
+            "states": {
+                "good": 95,
+                "warning": 30,
+                "critical": 20
+            },
+            "format": "{capacity}%  {icon} ",
+            "format-charging": "{capacity}% 󰂄 ",
+            "format-plugged": "{capacity}% 󰂄 ",
+            "format-alt": "{time} {icon}",
+            "format-icons": ["󰁻", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"],
+        },
+
+        "pulseaudio": {
+            "format": "{icon} {volume}% {format_source}",
+            "format-bluetooth": " {icon} {volume}% {format_source}",
+            "format-bluetooth-muted": "  {icon} {format_source}",
+            "format-muted": "  {format_source}",
+            "format-source": " {volume}%",
+            "format-source-muted": "",
+            "format-icons": {
+                "default": ["", "", ""],
+            },
+            "on-click": "pavucontrol",
+            "on-click-right": "foot -a pw-top pw-top",
+        },
+
+        "jack": {
+            "format": "{} 󱎔",
+            "format-xrun": "{xruns} xruns",
+            "format-disconnected": "DSP off",
+            "realtime": true
+        },
+
+        "tray": {
+            "icon-size": 14,
+            "spacing": 10
+        },
+}
+
