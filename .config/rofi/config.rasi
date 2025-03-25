@@ -1,2 +1,2 @@
-@theme "$HOME/.config/rofi/theme.rasi"
+@theme "/home/daniil/.config/rofi/theme.rasi"
 

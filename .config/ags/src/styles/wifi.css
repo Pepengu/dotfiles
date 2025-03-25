@@ -1,0 +1,8 @@
+.wifi_window {
+    border-width: 1px;
+    border-color: #33ccff;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 5px 2px 0px 0px;
+    background-color: rgba(0,0,0,0.4);
+}

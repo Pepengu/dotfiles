@@ -1,0 +1,111 @@
+@use "sass:color";
+
+$bg: #484e54;
+$fg: #7c818c;
+$accent: white;
+$radius: 10px;
+
+* {
+  border: none;
+  font-family: FontAwesome, JetBrains Mono Bold, sans-serif;
+  font-size: 19px;
+}
+
+.debug{
+  color: black;
+}
+
+window.Bar {
+  border: none;
+  box-shadow: none;
+  background-color: #343a40;
+  color: $accent;
+
+  .Workspaces  {
+    margin-left: 5px;
+    padding: 5px 0px 5px 0px;
+    background-color: $bg;
+    border-radius: $radius;
+
+    button {
+      all: unset;
+      margin: 0px 5px 0px 5px;
+      background-color: transparent;
+      color: $fg;
+
+      label {
+        font-size: 22px;
+
+      }
+
+      &:hover label {
+        transition: none;
+        box-shadow: inherit;
+        text-shadow: inherit;
+        border-radius: inherit;
+        color: #383c4a;
+      }
+
+      &:active label {
+        color: white;
+      }
+    }
+
+    label {
+      transition: 200ms;
+    }
+
+    .focused label {
+      color: $accent;
+    }
+  }
+
+  .Time{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $bg;
+    border-radius: $radius;
+  }
+
+  .SysTray {
+    margin-right: 8px;
+    background-color: $bg;
+    color: $fg;
+    border-radius: $radius;
+
+    menu {
+      background-color: $bg;
+    }
+
+    button {
+      background: inherit;
+      border-radius: $radius;
+      color: $fg;
+    }
+  }
+
+
+  .Battery {
+    background-color: $bg;
+    border-radius: $radius;
+    
+    label {
+      margin-right: 5px;
+      margin-left: 5px;
+      color: $accent;
+    }
+
+    icon {
+      margin-left: 5px;
+      color: $accent;
+    }
+  }
+
+  .KeyboardLayout{
+    background-color: $bg;
+    color: $accent;
+    margin-left: 5px;
+    border-radius: $radius;
+    padding: 0px 5px 0px 5px;
+  }
+}

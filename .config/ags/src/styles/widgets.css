@@ -1,0 +1,35 @@
+.clock {
+    margin: 3px;
+    font-size: 19px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: rgb(72, 78, 84);
+}
+
+.language,
+.tray,
+.battery,
+.extra{
+    margin: 3px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: none;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: rgb(72, 78, 84);
+    padding: 1px 5px 1px 5px;
+}
+
+.extra{
+    font-size: 22px;
+}
+
+.tray.item{
+    margin: 0px;
+    background: transparent;
+    color: white;
+}

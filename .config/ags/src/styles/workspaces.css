@@ -1,0 +1,36 @@
+.workspaces {
+    margin: 3px;
+    border-radius: 10px;
+    background-color: rgb(72, 78, 84);
+    /*border-color: #33ccff;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;*/
+}
+
+.workspaces button {
+    transition: none;
+    color: #7c818c;
+    background: transparent;
+    padding: 1px 5px 1px 5px;
+    font-size: 22px;
+    border-color: rgba(0,0,0,0);
+}
+
+.workspaces button + button {
+    margin-left: 5px;
+}
+
+.workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: #383c4a;
+}
+
+.workspaces button.focused {
+    color: white;
+}
+
+.workspaces button:first-child {
+}

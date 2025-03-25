@@ -1,0 +1,60 @@
+.extra button{
+    background-size: 24px;
+    background: transparent;
+}
+
+.extra_window{
+    background-color: #343a40;
+    border: none;
+    border-radius: 10px;
+    margin: 8px 8px 0px 0px;
+}
+
+.extra_wifi_button{
+    font-size: 18px;
+}
+
+.extra_wifi_button,
+.extra_power_button,
+.extra_bluetooth_button{
+    background-size: 50px 50px;
+    border-radius: 50%;
+    color: #ffffff;
+    background: rgba(26, 32, 54, 1);
+}
+
+
+.extra_brigtness_button,
+.extra_volume_button{
+    font-size: 18px;
+    background-size: 50px 50px;
+    border-radius: 50%;
+    background: rgba(26, 32, 54, 1);
+}
+
+.extra_brigtness_label,
+.extra_volume_label{
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 18px;
+    border-radius: 10px;
+    background: rgba(26, 32, 54, 1);
+}
+
+.extra_brigtness_slider slider,
+.extra_volume_slider slider{
+    font-size: 18px;
+    background-size: 50px 50px;
+    background: #ffffff;
+}
+
+
+.extra_brigtness_slider trough,
+.extra_volume_slider trough{
+    border-radius: 10px;
+    border-color: #33ccff;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    background: transparent;
+    background-color: rgba(0,0,0,0.2);
+}

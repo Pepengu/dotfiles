@@ -1,0 +1,59 @@
+2025/01/11-18:02:23.253 f61b7 Reusing MANIFEST /home/daniil/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2025/01/11-18:02:23.279 f61b7 Recovering log #714
+2025/01/11-18:02:23.284 f61b7 Level-0 table #717: started
+2025/01/11-18:02:23.290 f61b7 Level-0 table #717: 43856 bytes OK
+2025/01/11-18:02:23.291 f61b7 Delete type=0 #714
+2025/01/11-18:05:24.125 f61b7 Level-0 table #720: started
+2025/01/11-18:05:24.127 f61b7 Level-0 table #720: 56409 bytes OK
+2025/01/11-18:05:24.128 f61b7 Delete type=0 #718
+2025/01/11-18:05:24.128 f61b7 Compacting 4@0 + 1@1 files
+2025/01/11-18:05:24.131 f61b7 Generated table #721@0: 81 keys, 57158 bytes
+2025/01/11-18:05:24.131 f61b7 Compacted 4@0 + 1@1 files => 57158 bytes
+2025/01/11-18:05:24.132 f61b7 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/01/11-18:05:24.132 f61b7 Delete type=2 #720
+2025/01/11-18:05:24.132 f61b7 Delete type=2 #717
+2025/01/11-18:05:24.133 f61b7 Delete type=2 #711
+2025/01/11-18:05:24.133 f61b7 Delete type=2 #713
+2025/01/11-18:05:24.133 f61b7 Delete type=2 #715
+2025/01/11-18:14:24.125 f61b7 Level-0 table #723: started
+2025/01/11-18:14:24.130 f61b7 Level-0 table #723: 35908 bytes OK
+2025/01/11-18:14:24.131 f61b7 Delete type=0 #719
+2025/01/11-21:27:53.098 f61b7 Level-0 table #725: started
+2025/01/11-21:27:53.104 f61b7 Level-0 table #725: 40453 bytes OK
+2025/01/11-21:27:53.107 f61b7 Delete type=0 #722
+2025/01/12-17:05:09.500 f61b6 Level-0 table #727: started
+2025/01/12-17:05:09.505 f61b6 Level-0 table #727: 39786 bytes OK
+2025/01/12-17:05:09.512 f61b6 Delete type=0 #724
+2025/01/12-23:08:10.237 f61b7 Level-0 table #729: started
+2025/01/12-23:08:10.241 f61b7 Level-0 table #729: 52571 bytes OK
+2025/01/12-23:08:10.243 f61b7 Delete type=0 #726
+2025/01/12-23:08:10.243 f61b7 Compacting 4@0 + 1@1 files
+2025/01/12-23:08:10.247 f61b7 Generated table #730@0: 81 keys, 58553 bytes
+2025/01/12-23:08:10.247 f61b7 Compacted 4@0 + 1@1 files => 58553 bytes
+2025/01/12-23:08:10.248 f61b7 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/01/12-23:08:10.248 f61b7 Delete type=2 #727
+2025/01/12-23:08:10.248 f61b7 Delete type=2 #729
+2025/01/12-23:08:10.249 f61b7 Delete type=2 #723
+2025/01/12-23:08:10.249 f61b7 Delete type=2 #725
+2025/01/12-23:08:10.249 f61b7 Delete type=2 #721
+2025/01/13-16:46:16.731 f61b7 Level-0 table #732: started
+2025/01/13-16:46:16.735 f61b7 Level-0 table #732: 32516 bytes OK
+2025/01/13-16:46:16.735 f61b7 Delete type=0 #728
+2025/01/13-20:08:53.072 f61b7 Level-0 table #734: started
+2025/01/13-20:08:53.079 f61b7 Level-0 table #734: 54944 bytes OK
+2025/01/13-20:08:53.084 f61b7 Delete type=0 #731
+2025/01/13-20:44:03.925 f61b7 Level-0 table #736: started
+2025/01/13-20:44:03.933 f61b7 Level-0 table #736: 47137 bytes OK
+2025/01/13-20:44:03.937 f61b7 Delete type=0 #733
+2025/01/13-21:10:35.885 f61b6 Level-0 table #738: started
+2025/01/13-21:10:35.890 f61b6 Level-0 table #738: 47275 bytes OK
+2025/01/13-21:10:35.893 f61b6 Delete type=0 #735
+2025/01/13-21:10:35.894 f61b6 Compacting 4@0 + 1@1 files
+2025/01/13-21:10:35.901 f61b6 Generated table #739@0: 81 keys, 59006 bytes
+2025/01/13-21:10:35.901 f61b6 Compacted 4@0 + 1@1 files => 59006 bytes
+2025/01/13-21:10:35.902 f61b6 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/01/13-21:10:35.903 f61b6 Delete type=2 #738
+2025/01/13-21:10:35.903 f61b6 Delete type=2 #734
+2025/01/13-21:10:35.904 f61b6 Delete type=2 #732
+2025/01/13-21:10:35.904 f61b6 Delete type=2 #730
+2025/01/13-21:10:35.904 f61b6 Delete type=2 #736

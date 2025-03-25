@@ -5,9 +5,15 @@ local autocmd = vim.api.nvim_create_autocmd
 
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>r", ":RunnerBuildAndRun<CR>")
 vim.keymap.set("n", "<leader>i", ":RunnerShowInput<CR>")
+vim.keymap.set("n", "<leader>r", ":RunnerBuildAndRun<CR>")
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>p", "\"+p")
+vim.keymap.set("v", "<leader>p", "\"+p")
 
 autocmd('LspAttach', {
     group = PepenguGroup,

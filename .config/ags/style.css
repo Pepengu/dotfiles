@@ -1,0 +1,41 @@
+/*
+main_background = #343a40
+higlited = #3e444a
+blue = #BAC7DD
+cyan = #BDE7EE
+*/
+
+@import url("./src/styles/widgets.css");
+@import url("./src/styles/battery.css");
+@import url("./src/styles/workspaces.css");
+@import url("./src/styles/extra.css");
+@import url("./src/styles/wifi.css");
+
+* {
+    border: none;
+    font-family: FontAwesome, JetBrains Mono Bold, sans-serif;
+}
+
+highlight, fill {
+	background-color: #94e2d5;
+	border-radius: 100px;
+	transition: 200ms;
+}
+
+.bgcont {
+	background-color: #1E1E2E;
+	border: 1px solid #11111B;
+}
+
+.qs-item {
+	padding: 3px;
+}
+
+window.bar {
+    background-color: #343a40;
+    border-radius: 0px 0px 10px 10px;
+    border-color: #33ccff;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border: none;
+}

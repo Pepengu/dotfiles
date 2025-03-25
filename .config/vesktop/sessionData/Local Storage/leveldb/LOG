@@ -1,0 +1,51 @@
+2025/01/13-21:21:07.354 172bce Reusing MANIFEST /home/daniil/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2025/01/13-21:21:07.375 172bce Recovering log #737
+2025/01/13-21:21:07.375 172bce Reusing old log /home/daniil/.config/vesktop/sessionData/Local Storage/leveldb/000737.log 
+2025/01/13-21:24:08.799 172bcf Level-0 table #742: started
+2025/01/13-21:24:08.821 172bcf Level-0 table #742: 50242 bytes OK
+2025/01/13-21:24:08.823 172bcf Delete type=0 #737
+2025/01/13-21:40:04.557 172bcf Level-0 table #744: started
+2025/01/13-21:40:04.567 172bcf Level-0 table #744: 54030 bytes OK
+2025/01/13-21:40:04.571 172bcf Delete type=0 #741
+2025/01/13-23:44:07.872 172bce Level-0 table #746: started
+2025/01/13-23:44:07.878 172bce Level-0 table #746: 52173 bytes OK
+2025/01/13-23:44:07.880 172bce Delete type=0 #743
+2025/01/14-00:31:17.297 172bcf Level-0 table #748: started
+2025/01/14-00:31:17.305 172bcf Level-0 table #748: 35345 bytes OK
+2025/01/14-00:31:17.307 172bcf Delete type=0 #745
+2025/01/14-00:31:17.308 172bcf Compacting 4@0 + 1@1 files
+2025/01/14-00:31:17.315 172bcf Generated table #749@0: 81 keys, 59273 bytes
+2025/01/14-00:31:17.316 172bcf Compacted 4@0 + 1@1 files => 59273 bytes
+2025/01/14-00:31:17.317 172bcf compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/01/14-00:31:17.318 172bcf Delete type=2 #742
+2025/01/14-00:31:17.318 172bcf Delete type=2 #744
+2025/01/14-00:31:17.318 172bcf Delete type=2 #746
+2025/01/14-00:31:17.318 172bcf Delete type=2 #739
+2025/01/14-00:31:17.319 172bcf Delete type=2 #748
+2025/01/14-14:37:05.699 172bce Level-0 table #751: started
+2025/01/14-14:37:05.710 172bce Level-0 table #751: 51954 bytes OK
+2025/01/14-14:37:05.711 172bce Delete type=0 #747
+2025/01/14-16:42:27.610 172bcf Level-0 table #753: started
+2025/01/14-16:42:27.618 172bcf Level-0 table #753: 52894 bytes OK
+2025/01/14-16:42:27.620 172bcf Delete type=0 #750
+2025/01/14-20:21:56.034 172bce Level-0 table #755: started
+2025/01/14-20:21:56.040 172bce Level-0 table #755: 36895 bytes OK
+2025/01/14-20:21:56.041 172bce Delete type=0 #752
+2025/01/15-00:01:14.720 172bcf Level-0 table #757: started
+2025/01/15-00:01:14.724 172bcf Level-0 table #757: 50732 bytes OK
+2025/01/15-00:01:14.724 172bcf Delete type=0 #754
+2025/01/15-00:01:14.725 172bcf Compacting 4@0 + 1@1 files
+2025/01/15-00:01:14.727 172bcf Generated table #758@0: 81 keys, 59297 bytes
+2025/01/15-00:01:14.727 172bcf Compacted 4@0 + 1@1 files => 59297 bytes
+2025/01/15-00:01:14.728 172bcf compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/01/15-00:01:14.728 172bcf Delete type=2 #753
+2025/01/15-00:01:14.728 172bcf Delete type=2 #757
+2025/01/15-00:01:14.728 172bcf Delete type=2 #749
+2025/01/15-00:01:14.728 172bcf Delete type=2 #755
+2025/01/15-00:01:14.728 172bcf Delete type=2 #751
+2025/01/15-17:43:50.250 172bce Level-0 table #760: started
+2025/01/15-17:43:50.255 172bce Level-0 table #760: 32132 bytes OK
+2025/01/15-17:43:50.258 172bce Delete type=0 #756
+2025/01/15-17:47:31.493 172bcf Level-0 table #762: started
+2025/01/15-17:47:31.495 172bcf Level-0 table #762: 49993 bytes OK
+2025/01/15-17:47:31.496 172bcf Delete type=0 #759
