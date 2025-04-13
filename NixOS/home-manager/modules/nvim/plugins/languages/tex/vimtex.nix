@@ -22,7 +22,6 @@
             compiler_method = "latexmk";
             compiler_latexmk = {
                 aux_dir = "./aux";
-                out_dir = "./out";
             };
         };
     };
