@@ -4,7 +4,7 @@ _: {
     imports = [
        ./packages.nix
        ./firefox.nix
-#       ./rustup.nix
+       ./v2raya.nix
 
        ./desktop
     ];
