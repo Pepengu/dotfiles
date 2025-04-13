@@ -27,6 +27,8 @@
             "$mainMod, V, togglefloating, "
             ", Print, exec, hyprshot -m region --clipboard-only"
             "SHIFT, Print, exec, hyprshot -m active -m output -- gimp"
+            "$mainMod, SPACE, exec, " #fix for inserting <D-space> in neovim when changing layout. 
+                                      #Why it fixes it? No fucking clue.
         ] 
             ++ (map (n: "$mainMod, ${n}, workspace, ${n}") workspaces) # Switch workpace
             ++ (map (n: "$mainMod SHIFT, ${n}, movetoworkspace, ${n}") workspaces) # Move tab to workspace
