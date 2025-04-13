@@ -5,8 +5,11 @@ in {
         enable = true;
         settings = {
             ipc = false;
+            preload = [
+                "${wallpaper}"
+            ];
             wallpaper = [
-                ",${wallpaper}"
+                "eDP-1,${wallpaper}"
             ];
         };
     };

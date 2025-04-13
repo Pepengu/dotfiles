@@ -4,6 +4,7 @@ let
 in {
     imports =  [
         (import ./modules)
+        (import ./backgrounds)
     ];
 
     home = {

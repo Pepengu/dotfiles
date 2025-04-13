@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{pkgs, lib, config, ...}: {
     stylix = {
         enable = true;
 
@@ -9,7 +9,7 @@
             neovim.enable = false;
         };
 
-        image = ./../backgrounds/background.jpg;
+        image = config.backgrounds."background.jpg";
         base16Scheme = lib.mkDefault "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
         polarity = lib.mkDefault "dark";
