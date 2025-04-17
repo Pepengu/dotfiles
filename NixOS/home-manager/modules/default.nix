@@ -11,5 +11,6 @@ _: {
     ./swayosd.nix
     ./hyprpanel.nix
     ./LaTeX.nix
+    ./obs.nix
   ];
 }
