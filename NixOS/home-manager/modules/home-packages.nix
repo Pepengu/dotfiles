@@ -8,6 +8,11 @@
     hyprshot
     vlc
     dolphin
+    zathura
+
+    thunderbird
+    ani-cli
+    ani-skip
 
     # Fonts
     font-awesome

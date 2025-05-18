@@ -6,7 +6,7 @@ _: {
             keymaps = {
                 silent = true;
                 diagnostic = {
-                    "<leader>E" = "open_float";
+                    "<leader>e" = "open_float";
                     "[" = "goto_prev";
                     "]" = "goto_next";
                     "<leader>do" = "setloclist";

@@ -19,6 +19,8 @@
             syntax_enable = false;
             completion = true;
 
+            view_method = "zathura";
+
             compiler_method = "latexmk";
             compiler_latexmk = {
                 aux_dir = "./aux";

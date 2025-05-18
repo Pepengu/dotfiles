@@ -14,9 +14,14 @@
             rust
             latex
             cpp
+            javascript
+            typescript
+            css
         ];
 
         settings = {
+            auto_install = false;
+
 #            ensure_installed = "all";
 
             highlight.enable = true;

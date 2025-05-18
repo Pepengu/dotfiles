@@ -3,5 +3,7 @@ _: {
         ./rust
         ./tex
         ./cpp
+        ./js
+        ./css
     ];
 }

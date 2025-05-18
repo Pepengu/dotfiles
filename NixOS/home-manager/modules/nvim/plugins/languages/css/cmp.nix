@@ -1,7 +1,8 @@
 _: {
     plugins.cmp.filetype = {
-        rust = {
+        css = {
             sources = [
+            { name = "git"; }
             { name = "nvim_lsp"; }
             {
                 name = "buffer"; # text within current buffer
@@ -16,3 +17,4 @@ _: {
         };
     };
 }
+
