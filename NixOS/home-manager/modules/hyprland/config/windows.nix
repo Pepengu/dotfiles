@@ -6,9 +6,9 @@ _: {
         ];
 
         windowrule = [
-            "float, ^(pavucontrol)$"
-            "size 500 500, ^(pavucontrol)$"
-            "move 100%-500 40, ^(pavucontrol)$"
+            #"float, ^(pavucontrol)$"
+            #"size 500 500, ^(pavucontrol)$"
+            #"move 100%-500 40, ^(pavucontrol)$"
         ];
 
         windowrulev2 = [

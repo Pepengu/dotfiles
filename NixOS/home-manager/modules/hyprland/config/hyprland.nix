@@ -8,8 +8,6 @@ _: {
 #            "ags"
             "hyprpaper"
             "nm-applet --indicator "
-#            "dunst "
-#            "sudo v2rayA "
         ];
 
         monitor = [

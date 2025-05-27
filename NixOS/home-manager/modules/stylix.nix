@@ -5,12 +5,13 @@
         autoEnable = false;
         targets = {
             ghostty.enable = false;
-            rofi.enable = false;
             neovim.enable = false;
+            firefox.enable = true;
+            gtk.enable = true;
         };
 
-        image = config.backgrounds."background.jpg";
-        base16Scheme = lib.mkDefault "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+        image = config.backgrounds."tokyonight-style.png";
+        base16Scheme = lib.mkDefault "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
 
         polarity = lib.mkDefault "dark";
         cursor = {

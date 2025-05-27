@@ -1,6 +1,7 @@
 _: {
     imports = [
         ./languages
+
         ./undotree.nix
         ./lsp.nix
         ./cmp.nix
@@ -10,11 +11,18 @@ _: {
     ];
     plugins = {
         lualine.enable = true;
+        codecompanion = {
+            enable = true;
+        };
     };
 
     colorschemes = {
-        catppuccin = {
+        tokyonight = {
             enable = true;
+        };
+        
+        catppuccin = {
+            enable = false;
 
             settings = {
                 flavour = "mocha";

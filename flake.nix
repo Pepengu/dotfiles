@@ -7,17 +7,17 @@
 
   inputs = {
 #   Nixos
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     hyprland.url = "github:hyprwm/Hyprland";
 
     home-manager = {
-	    url = "github:nix-community/home-manager/release-24.11";
+	    url = "github:nix-community/home-manager/release-25.05";
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
 
 #   Theming
     stylix = {
-      url = "github:danth/stylix/release-24.11";
+      url = "github:danth/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -30,7 +30,7 @@
 
 # Apps
     nixvim = {
-        url = "github:nix-community/nixvim/nixos-24.11";
+        url = "github:nix-community/nixvim";
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -44,7 +44,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, catppuccin, nixvim, hyprpanel, rust-overlay, ...} @ inputs: 
+  outputs = {nixpkgs, home-manager, stylix, catppuccin, nixvim, hyprpanel, ...} @ inputs: 
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { 
@@ -58,8 +58,8 @@
       daniil = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-            stylix.homeManagerModules.stylix
-            catppuccin.homeManagerModules.catppuccin
+            stylix.homeModules.stylix
+            catppuccin.homeModules.catppuccin
             nixvim.homeManagerModules.nixvim
             hyprpanel.homeManagerModules.hyprpanel
 

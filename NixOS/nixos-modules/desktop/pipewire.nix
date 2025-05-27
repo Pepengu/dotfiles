@@ -9,5 +9,5 @@ _: {
     };
 
     nixpkgs.config.pulseaudio = true;
-    hardware.pulseaudio.enable = false;
+    services.pulseaudio.enable = false;
 }

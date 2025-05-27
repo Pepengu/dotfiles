@@ -9,8 +9,8 @@ _: {
     ./stylix.nix
     ./home-packages.nix
     ./swayosd.nix
-    ./hyprpanel.nix
     ./LaTeX.nix
     ./obs.nix
+    ./fish.nix
   ];
 }

@@ -1,13 +1,15 @@
 {pkgs, ...}: {
 
-  security.sudo.wheelNeedsPassword = false;
-  nix.settings.trusted-users = ["root" "@wheel"];
+    security.sudo.wheelNeedsPassword = false;
+    nix.settings.trusted-users = ["root" "@wheel"];
+
+    programs.fish.enable = true;
 
     users.users.daniil = {
         isNormalUser = true;
         description = "Daniil";
 #        home = ~/home/daniil;
-#        shell = pkgs.fish;
+        shell = pkgs.fish;
         extraGroups = [ "networkmanager" "wheel" "docker"];
     };
 }

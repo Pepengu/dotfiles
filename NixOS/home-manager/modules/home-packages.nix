@@ -7,8 +7,8 @@
     telegram-desktop
     hyprshot
     vlc
-    dolphin
     zathura
+    nautilus
 
     thunderbird
     ani-cli
@@ -19,7 +19,6 @@
     iosevka
     inter
     liberation_ttf
-    nerdfonts
     open-sans
   ];
 

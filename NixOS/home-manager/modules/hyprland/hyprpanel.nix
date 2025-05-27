@@ -5,17 +5,20 @@ in {
         enable = true;
         overlay.enable = true;
 
-        layout = {
-            "bar.layouts" = {
-                "0" = {
-                    left = [ "workspaces" "kbLayout" ];
-                    middle = [ "clock" ];
-                    right = [ "volume" "mircrophone" "network" "bluetooth" "battery" "systray" "notifications" ];
-                };
-            };
-        };
 
         settings = {
+            theme.name = "tokyo_night";
+
+            layout = {
+                "bar.layouts" = {
+                    "0" = {
+                        left = [ "workspaces" "kbinput" ];
+                        middle = [ "clock" ];
+                        right = [ "volume" "mircrophone" "network" "bluetooth" "battery" "systray" "notifications" ];
+                    };
+                };
+            };
+
             bar = {
                 clock.format = "%a, %d %b, %H:%M";
                 

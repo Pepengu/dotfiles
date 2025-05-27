@@ -5,11 +5,12 @@ _: {
        ./packages.nix
        ./firefox.nix
        ./v2raya.nix
+       ./docker.nix
 
        ./desktop
     ];
 
     nixpkgs.config.allowUnfree = true;
 
-    system.stateVersion = "24.11";
+    system.stateVersion = "25.05";
 }

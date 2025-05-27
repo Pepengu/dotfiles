@@ -1,9 +1,9 @@
 _: {
     imports = [
+       ./sddm
+
        ./hyprland.nix
        ./boot.nix
-       ./greetd.nix
-       ./getty.nix
        ./networking.nix
        ./users.nix
        ./fonts.nix

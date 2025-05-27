@@ -23,7 +23,7 @@
             "$mainMod, Q, exec, ghostty"
             "$mainMod, C, killactive, "
             "$mainMod, M, exit, "
-            "$mainMod, E, exec, thunar"
+            "$mainMod, E, exec, nautilus"
             "$mainMod, V, togglefloating, "
             ", Print, exec, hyprshot -m region --clipboard-only"
             "SHIFT, Print, exec, hyprshot -m active -m output -- gimp"
