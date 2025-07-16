@@ -1,17 +1,17 @@
 _: {
-    home.shellAliases.v = "nvim";
+  home.shellAliases.v = "nvim";
 
-    programs.nixvim = {
-        enable = true;
-        defaultEditor = true;
+  programs.nixvim = {
+    enable = true;
+    defaultEditor = true;
 
-        viAlias = true;
-        vimAlias = true;
+    viAlias = true;
+    vimAlias = true;
 
-        imports = [
-            ./settings.nix
-            ./remap.nix
-            ./plugins
-        ];
-    };
+    imports = [
+      ./settings.nix
+      ./remap.nix
+      ./plugins
+    ];
+  };
 }

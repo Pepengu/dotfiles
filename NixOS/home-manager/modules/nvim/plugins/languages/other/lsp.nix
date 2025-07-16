@@ -1,17 +1,10 @@
 _: {
-    imports = [
-        ./rust.nix
-        ./tex.nix
-        ./cpp.nix
-    ];
-
     plugins = {
         lsp = {
             servers = {
-                #nixd.enable = true;
+                nixd.enable = true;
                 cssls.enable = true;
                 ts_ls.enable = true;
-                nil_ls.enable = true;
                 taplo.enable = true;
             };
         };

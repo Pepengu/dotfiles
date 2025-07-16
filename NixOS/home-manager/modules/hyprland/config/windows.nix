@@ -1,18 +1,13 @@
 _: {
-    wayland.windowManager.hyprland.settings = {
-        exec-once = [
-            "[workspace 2 silent] firefox"
-            "[workspace 4 silent] telegram-desktop"
-        ];
+  wayland.windowManager.hyprland.settings = {
+    exec-once = [
+      "[workspace 2 silent] ghostty"
+      "[workspace 2 silent] zen"
+      "[workspace 3 silent] telegram-desktop"
+    ];
 
-        windowrule = [
-            #"float, ^(pavucontrol)$"
-            #"size 500 500, ^(pavucontrol)$"
-            #"move 100%-500 40, ^(pavucontrol)$"
-        ];
-
-        windowrulev2 = [
-            "noborder, onworkspace:w[t1]"
-        ];
-    };
+    windowrulev2 = [
+      "noborder, onworkspace:w[t1]"
+    ];
+  };
 }

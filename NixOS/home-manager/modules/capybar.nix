@@ -1,5 +1,5 @@
 _: {
-    programs.hyprlock = {
+    programs.capybar = {
         enable = true;
     };
 }

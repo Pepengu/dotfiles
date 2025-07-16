@@ -1,16 +1,26 @@
-_: {
-    nix.settings.experimental-features = ["nix-command" "flakes"];
+{pkgs, inputs, ...}: 
+{
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-    imports = [
-       ./packages.nix
-       ./firefox.nix
-       ./v2raya.nix
-       ./docker.nix
+  imports = [
+#    ./docker.nix
 
-       ./desktop
-    ];
+    ./desktop
+  ];
 
-    nixpkgs.config.allowUnfree = true;
+  services = {
+     v2raya.enable = true;
+  };
 
-    system.stateVersion = "25.05";
+  environment.systemPackages = with pkgs; [
+    nodejs
+
+    home-manager
+
+    inputs.zen-browser.packages.${system}.default
+  ];
+
+  nixpkgs.config.allowUnfree = true;
+
+  system.stateVersion = "25.05";
 }

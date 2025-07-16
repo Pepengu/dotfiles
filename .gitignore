@@ -1,1 +1,1 @@
-./NixOS/home-manager/modules/nvim/plugins/codecompanion/KEY
+NixOS/home-manager/modules/secrets/secrets.nix

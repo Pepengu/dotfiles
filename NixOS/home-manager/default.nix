@@ -1,18 +1,18 @@
 _:
 let
-    username = "daniil";
+  username = "daniil";
 in {
-    imports =  [
-        (import ./modules)
-        (import ./backgrounds)
-    ];
+  imports =  [
+    (import ./modules)
+    (import ./backgrounds)
+  ];
 
-    home = {
-        inherit username;
-        homeDirectory = "/home/${username}";
+  home = {
+    inherit username;
+    homeDirectory = "/home/${username}";
 
-        stateVersion = "24.11";
-    };
+    stateVersion = "25.05";
+  };
+
+  nixpkgs.config.allowUnfree = true;
 }
-
-

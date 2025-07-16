@@ -1,16 +1,41 @@
-_: {
+{pkgs, ...}: {
   imports = [
     ./hyprland
-    ./rofi
     ./nvim
+    ./rofi
+    ./ghostty.nix
     ./git.nix
     ./theme.nix
-    ./ghostty.nix
     ./stylix.nix
-    ./home-packages.nix
-    ./swayosd.nix
     ./LaTeX.nix
     ./obs.nix
-    ./fish.nix
+    ./capybar.nix
   ];
+
+  home.packages = with pkgs; [
+    brightnessctl
+    hyprpicker
+
+    vscode
+    telegram-desktop
+    hyprshot
+    vlc
+    zathura
+    nautilus
+
+    thunderbird
+    ani-cli
+    ani-skip
+
+# Fonts
+    font-awesome
+    iosevka
+    inter
+    liberation_ttf
+    open-sans
+  ];
+
+  programs = {
+    fish.enable = true;
+  };
 }

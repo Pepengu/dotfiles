@@ -1,12 +1,15 @@
 _: {
-    programs.ghostty = {
-       enable = true;
-       enableFishIntegration = true;
+  programs.ghostty = {
+    enable = true;
+    enableFishIntegration = true;
+    installVimSyntax = true;
 
-       settings = {
-#           theme = "catppuccin-mocha";
-           theme = "tokyonight";
-           font-size = 16;
-       };
+    settings = {
+      window-decoration = "none";
+      theme = "tokyonight";
+      font-size = 16;
+      window-save-state = "always";
+      gtk-tabs-location = "hidden";
     };
+  };
 }
