@@ -13,6 +13,7 @@
       vimdoc
       rust
       latex
+      typst
       cpp
       javascript
       typescript

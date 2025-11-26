@@ -5,6 +5,7 @@ _: {
     ./undotree.nix
     ./lsp.nix
     ./cmp.nix
+    ./dap.nix
     ./harpoon.nix
     ./treesitter.nix
     ./competitest.nix

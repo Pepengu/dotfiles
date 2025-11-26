@@ -1,4 +1,4 @@
-_:
+{inputs, pkgs, ...}:
 let
   username = "daniil";
 in {

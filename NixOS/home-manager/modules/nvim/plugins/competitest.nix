@@ -24,6 +24,18 @@ _: {
               "-Wextra"
           ];
         };
+        rust = {
+          exec = "rustc";
+          args = [
+            "$(FNAME)"
+            "--crate-name"
+            "problem"
+          ];
+        };
+      };
+
+      run_command = {
+          rust.exec = "./problem";
       };
     };
   };

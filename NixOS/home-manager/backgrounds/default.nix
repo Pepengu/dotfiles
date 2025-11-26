@@ -1,4 +1,4 @@
-{lib, ...}: {
+{lib, config, ...}: {
   options.backgrounds = lib.mkOption {
     type = lib.types.attrsOf lib.types.path;
     default = with builtins;

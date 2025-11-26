@@ -8,6 +8,7 @@
   inputs = {
 #   Nixos
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
 
     home-manager = {
@@ -21,8 +22,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
-
     base16-schemes = {
       url = "github:tinted-theming/base16-schemes";
       flake = false;
@@ -30,15 +29,21 @@
 
 # Apps
     nixvim = {
-      url = "github:nix-community/nixvim";
+      url = "github:nix-community/nixvim/nixos-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    zen-browser= {
+      url = "github:0xc000022070/zen-browser-flake";
+    };
 
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    capybar.url = "github:CapyCore/capybar/dev";
 
-    capybar.url = "github:CapyCore/capybar";
+    prismlauncher = {
+      url = "github:Diegiwg/PrismLauncher-Cracked";
+    };
+
+
 
 # Coding
     rust-overlay = {
@@ -46,29 +51,46 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixos-cursor = {
+      url = "github:Distracted-E421/nixos-cursor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = {nixpkgs, home-manager, stylix, catppuccin, nixvim, hyprpanel, capybar, ...} @ inputs: 
+  outputs = {nixpkgs, home-manager, stylix, nixvim, capybar, zen-browser, prismlauncher, nixos-cursor, ...} @ inputs: 
     let
     system = "x86_64-linux";
   pkgs = import nixpkgs { 
     inherit system;
     overlays = [
+
     ];
   };
   in
   {
+    overlays.default = final: prev: {
+      dockerfile-language-server =
+        (prev.nodePackages_latest.dockerfile-language-server-nodejs
+         or prev.nodePackages.dockerfile-language-server-nodejs);
+    };
+
+
     homeConfigurations = {
       daniil = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        
+        extraSpecialArgs = { inherit inputs; };
         modules = [
           stylix.homeModules.stylix
-            catppuccin.homeModules.catppuccin
-            nixvim.homeManagerModules.nixvim
-            hyprpanel.homeManagerModules.hyprpanel
-            capybar.homeManagerModules.default
+          zen-browser.homeModules.default
 
-            ./NixOS/home-manager 
+          nixvim.homeManagerModules.nixvim
+          capybar.homeManagerModules.default
+
+          nixos-cursor.homeManagerModules.default
+
+          ./NixOS/home-manager 
         ];
       };
     };
@@ -78,7 +100,13 @@
       system = "x86_64-linux";
       modules = [
         ./NixOS/nixos-modules
-          ./NixOS/hardware-configuration.nix
+        ./NixOS/hardware-configuration.nix
+
+        home-manager.nixosModules.home-manager
+
+        {
+          home-manager.extraSpecialArgs = { inherit inputs; };
+        }
       ];
     };
   };

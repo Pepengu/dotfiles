@@ -1,5 +1,5 @@
 {config, ...}: let
-  wallpaper = config.stylix.image;
+  wallpaper = config.backgrounds."tokyonight-style.png";
 in {
   services.hyprpaper = {
     enable = true;

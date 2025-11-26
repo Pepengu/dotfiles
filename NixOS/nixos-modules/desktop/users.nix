@@ -10,6 +10,6 @@
         description = "Daniil";
 #        home = ~/home/daniil;
         shell = pkgs.fish;
-        extraGroups = [ "networkmanager" "wheel" "docker"];
+        extraGroups = [ "networkmanager" "wheel" "docker" "scanner" "lp"];
     };
 }

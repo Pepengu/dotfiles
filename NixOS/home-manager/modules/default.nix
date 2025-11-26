@@ -1,31 +1,50 @@
-{pkgs, ...}: {
+{inputs, pkgs, ...}: 
+let
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.system;
+    config.allowUnfree = true;
+  };
+in
+{
   imports = [
     ./hyprland
     ./nvim
+    ./style
     ./rofi
-    ./ghostty.nix
+    ./terminal.nix
     ./git.nix
     ./theme.nix
-    ./stylix.nix
     ./LaTeX.nix
     ./obs.nix
     ./capybar.nix
+    ./zen.nix
   ];
 
   home.packages = with pkgs; [
     brightnessctl
     hyprpicker
+    btop
+    ripgrep
 
     vscode
+    unstable.code-cursor
+
+    libreoffice
     telegram-desktop
+    vesktop
     hyprshot
     vlc
     zathura
     nautilus
+    gimp
+    amnezia-vpn
 
     thunderbird
     ani-cli
     ani-skip
+    jre
+
+    typst
 
 # Fonts
     font-awesome
@@ -36,6 +55,9 @@
   ];
 
   programs = {
-    fish.enable = true;
+  };
+
+  services = {
+    swayosd.enable = true;
   };
 }

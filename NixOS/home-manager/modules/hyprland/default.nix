@@ -2,7 +2,7 @@ _: {
   imports =  [
     ./config
     ./hyprpaper.nix
-    ./hyprpanel.nix
+#    ./hyprpanel.nix
     ./hypridle.nix
   ];
 

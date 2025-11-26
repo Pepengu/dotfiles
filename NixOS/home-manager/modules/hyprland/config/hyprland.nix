@@ -2,15 +2,17 @@ _: {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       "brigtnessctl s 451"
-        "hyprpanel"
+        "capybar"
         "hyprpaper"
         "nm-applet --indicator "
         "ssh-agent"
+        "blueman-applet"
     ];
 
     monitor = [
       "eDP-1, 1920x1200@60.03Hz, 0x0, 1"
-        "HDMI-A-2,preferred,auto,1,mirror,eDP-1"
+      "HDMI-A-1,preferred,auto,1,mirror,eDP-1"
+      #"HDMI-A-1, preferred, auto-right, 1"
     ];
 
     input = {

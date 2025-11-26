@@ -19,17 +19,18 @@
 
     bind = [
       "$mainMod, S, exec, rofi -show drun -show-icons"
-        "$mainMod, B, exec, ags -t bar-0"
-        "$mainMod, Q, exec, ghostty"
-        "$mainMod, P, exec, hyprpicker"
-        "$mainMod, C, killactive, "
-        "$mainMod, M, exit, "
-        "$mainMod, E, exec, nautilus"
-        "$mainMod, V, togglefloating, "
-        ", Print, exec, hyprshot -m region --clipboard-only"
-        "SHIFT, Print, exec, hyprshot -m active -m output -- gimp"
-        "$mainMod, SPACE, exec, " #fix for inserting <D-space> in neovim when changing layout. 
-#Why it fixes it? No fucking clue.
+      "$mainMod, B, exec, capybar toggle"
+      "$mainMod, T, exec, ghostty"
+      "$mainMod, P, exec, hyprpicker"
+      "$mainMod, K, killactive, "
+      "$mainMod, M, exit, "
+      "$mainMod, E, exec, nautilus"
+      "$mainMod, F, togglefloating, "
+      ", Print, exec, hyprshot -m region --clipboard-only"
+      "SHIFT, Print, exec, hyprshot -m active -m output -- gimp"
+      "$mainMod, SPACE, exec, " #fix for inserting <D-space> in neovim when changing layout. 
+      #Why it fixes it? No fucking clue.
+      ", ALT, pass, class:^(vesktop)$"
     ] 
     ++ (map (n: "$mainMod, ${n}, workspace, ${n}") workspaces) # Switch workpace
     ++ (map (n: "$mainMod SHIFT, ${n}, movetoworkspace, ${n}") workspaces) # Move tab to workspace
@@ -38,29 +39,29 @@
 
 # Media Keys
 
-    bindel = [
-      ", XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+#    bindel = [
+#      ", XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
-        ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
-        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-        ", XF86AudioMicMute,     exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-
-        ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-        ", XF86MonBrightnessUp,   exec, brightnessctl s 10%+"
-    ];
+#        ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+#        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+#        ", XF86AudioMicMute,     exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+#
+#        ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+#        ", XF86MonBrightnessUp,   exec, brightnessctl s 10%+"
+#    ];
 
 #swayosd version
-#        bindel = [
-#            ",XF86AudioRaiseVolume,exec,swayosd-client --output-volume raise"
-#            ",XF86AudioLowerVolume,exec,swayosd-client --output-volume lower"
+        bindel = [
+            ",XF86AudioRaiseVolume,exec,swayosd-client --output-volume raise"
+            ",XF86AudioLowerVolume,exec,swayosd-client --output-volume lower"
 
-#            ",XF86AudioMute,exec,swayosd-client --output-volume mute-toggle"
+            ",XF86AudioMute,exec,swayosd-client --output-volume mute-toggle"
 
-#            ",XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
+            ",XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
 
-#            ",XF86MonBrightnessUp,exec,swayosd-client --brightness raise"
-#            ",XF86MonBrightnessDown,exec,swayosd-client --brightness lower"
-#        ];
+            ",XF86MonBrightnessUp,exec,swayosd-client --brightness raise"
+            ",XF86MonBrightnessDown,exec,swayosd-client --brightness lower"
+        ];
 
 # Mouse keys
     bindm = [
@@ -68,4 +69,4 @@
         "$mainMod, mouse:273, resizewindow"
     ];
   };
-}
+             }
