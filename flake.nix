@@ -82,6 +82,34 @@
       inherit system;
       overlays = [];
     };
+
+    # Get all config directories (excluding common)
+    configDir = ./NixOS;
+    configDirs = builtins.filter
+      (name: name != "common")
+      (builtins.attrNames (builtins.readDir configDir));
+
+    # Import a config directory and get its outputs
+    importConfig = configName: let
+      configPath = configDir + "/${configName}";
+      commonPath = configDir + "/common";
+      config = import (configPath + "/default.nix") {
+        inherit home-manager nixpkgs stylix zen-browser nixvim capybar nixos-cursor sops-nix inputs pkgs;
+        inherit commonPath;
+      };
+    in
+      config;
+
+    # Merge all config outputs
+    allConfigs = builtins.map importConfig configDirs;
+    mergedHomeConfigs = builtins.foldl'
+      (acc: config: acc // (config.homeConfigurations or {}))
+      {}
+      allConfigs;
+    mergedNixosConfigs = builtins.foldl'
+      (acc: config: acc // (config.nixosConfigurations or {}))
+      {}
+      allConfigs;
   in {
     overlays.default = final: prev: {
       dockerfile-language-server =
@@ -89,33 +117,7 @@
           or prev.nodePackages.dockerfile-language-server-nodejs);
     };
 
-    homeConfigurations = {
-      daniil = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {inherit inputs;};
-        modules = [
-          stylix.homeModules.stylix
-          zen-browser.homeModules.default
-          nixvim.homeManagerModules.nixvim
-          capybar.homeManagerModules.default
-          nixos-cursor.homeManagerModules.default
-          sops-nix.homeManagerModules.sops
-          ./NixOS/home-manager
-        ];
-      };
-    };
-
-    nixosConfigurations."daniil" = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      system = "x86_64-linux";
-      modules = [
-        ./NixOS/nixos-modules
-        ./NixOS/hardware-configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.extraSpecialArgs = {inherit inputs;};
-        }
-      ];
-    };
+    homeConfigurations = mergedHomeConfigs;
+    nixosConfigurations = mergedNixosConfigs;
   };
 }
