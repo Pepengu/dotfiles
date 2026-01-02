@@ -11,7 +11,6 @@ in {
   programs.rofi = {
     enable = true;
     package = rofi;
-    font = lib.mkForce "${config.stylix.fonts.serif.name} 20";
     theme = lib.mkForce ./theme.rasi;
   };
 

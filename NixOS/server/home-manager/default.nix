@@ -3,6 +3,7 @@ let
   username = "daniil";
 in {
   imports = [
+    ./modules
   ];
 
   home = {

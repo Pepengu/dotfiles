@@ -26,11 +26,6 @@
     };
 
     # Theming
-    stylix = {
-      url = "github:danth/stylix/release-25.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     base16-schemes = {
       url = "github:tinted-theming/base16-schemes";
       flake = false;
@@ -68,7 +63,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    stylix,
     nixvim,
     capybar,
     zen-browser,
@@ -94,7 +88,7 @@
       configPath = configDir + "/${configName}";
       commonPath = configDir + "/common";
       config = import (configPath + "/default.nix") {
-        inherit home-manager nixpkgs stylix zen-browser nixvim capybar nixos-cursor sops-nix inputs pkgs;
+        inherit home-manager nixpkgs zen-browser nixvim capybar nixos-cursor sops-nix inputs pkgs;
         inherit commonPath;
       };
     in
