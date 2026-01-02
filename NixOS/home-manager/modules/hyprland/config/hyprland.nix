@@ -11,8 +11,8 @@ _: {
 
     monitor = [
       "eDP-1, 1920x1200@60.03Hz, 0x0, 1"
-      "HDMI-A-1,preferred,auto,1,mirror,eDP-1"
-      #"HDMI-A-1, preferred, auto-right, 1"
+      #"HDMI-A-1,preferred,auto,1,mirror,eDP-1"
+      "HDMI-A-1, preferred, auto-up, 1"
     ];
 
     input = {

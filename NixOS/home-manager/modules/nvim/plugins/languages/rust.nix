@@ -2,7 +2,7 @@
   extraPackages = with pkgs;
   [
     lldb
-      rust-analyzer
+    rust-analyzer
   ];
 
   globals.rustfmt_autosave = true;

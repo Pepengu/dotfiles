@@ -2,15 +2,14 @@
 let
   username = "daniil";
 in {
-  imports =  [
-    (import ./modules)
-    (import ./backgrounds)
+  imports = [
+    ./modules
+    ./backgrounds
   ];
 
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
-
     stateVersion = "25.05";
   };
 

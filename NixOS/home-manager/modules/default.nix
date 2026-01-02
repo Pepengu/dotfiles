@@ -13,6 +13,8 @@ in
     ./rofi
     ./terminal.nix
     ./git.nix
+    ./gh.nix
+    # ./secrets.nix  # Uncomment after setting up secrets (see secrets/README.md)
     ./theme.nix
     ./LaTeX.nix
     ./obs.nix
@@ -21,13 +23,18 @@ in
   ];
 
   home.packages = with pkgs; [
+    # User applications from flake inputs
+    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     brightnessctl
     hyprpicker
     btop
     ripgrep
 
-    vscode
+    google-chrome
+
+    vscode-fhs
     unstable.code-cursor
+    ollama
 
     libreoffice
     telegram-desktop
@@ -45,6 +52,7 @@ in
     jre
 
     typst
+    elixir
 
 # Fonts
     font-awesome

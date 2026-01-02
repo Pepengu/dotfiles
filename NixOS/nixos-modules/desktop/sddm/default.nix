@@ -6,17 +6,20 @@ in {
     platformTheme = "gtk2";
   };
 
-  services.displayManager = {
-    defaultSession = "hyprland";
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-      theme = "${sddmTheme}";
+  services = { 
+    displayManager = {
+      defaultSession = "hyprland";
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+        theme = "${sddmTheme}";
+      };
     };
   };
 
-
-  environment.systemPackages = with pkgs; [
-    libsForQt5.qt5.qtgraphicaleffects
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      libsForQt5.qt5.qtgraphicaleffects
+    ];
+  };
 }

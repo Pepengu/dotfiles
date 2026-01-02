@@ -1,1 +1,3 @@
 NixOS/home-manager/modules/secrets/secrets.nix
+NixOS/home-manager/secrets/secrets.yaml
+*.age
