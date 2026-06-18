@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports =  [
     ./config
-    ./hypridle.nix
+#    ./hypridle.nix
   ];
 
   wayland.windowManager.hyprland = {

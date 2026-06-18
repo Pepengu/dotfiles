@@ -2,11 +2,11 @@ _: {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       "brigtnessctl s 451"
-        "capybar"
-        "hyprpaper"
-        "nm-applet --indicator "
-        "ssh-agent"
-        "blueman-applet"
+      "dms run"
+      "hyprpaper"
+      "nm-applet --indicator "
+      "ssh-agent"
+      "blueman-applet"
     ];
 
     monitor = [

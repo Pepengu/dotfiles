@@ -9,9 +9,8 @@
     nerd-fonts.symbols-only
 
     noto-fonts
-    noto-fonts-extra
     noto-fonts-cjk-sans
-    noto-fonts-emoji
+    noto-fonts-color-emoji
 
     inter
     roboto

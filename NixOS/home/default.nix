@@ -1,4 +1,4 @@
-{home-manager, nixpkgs, zen-browser, nixvim, capybar, nixos-cursor, sops-nix, inputs, pkgs, commonPath, ...}:
+{home-manager, nixpkgs, zen-browser, nixvim, capybar, sops-nix, inputs, pkgs, commonPath, ...}:
 let
   commonNixos = commonPath + "/nixos/default.nix";
   commonHomeManager = commonPath + "/home-manager/default.nix";
@@ -9,9 +9,8 @@ in
     extraSpecialArgs = {inherit inputs;};
     modules = [
       zen-browser.homeModules.default
-      nixvim.homeManagerModules.nixvim
+      nixvim.homeModules.nixvim
       capybar.homeManagerModules.default
-      nixos-cursor.homeManagerModules.default
       sops-nix.homeManagerModules.sops
       commonHomeManager
       ./home-manager
@@ -31,9 +30,8 @@ in
         home-manager.users.daniil = {
           imports = [
             zen-browser.homeModules.default
-            nixvim.homeManagerModules.nixvim
+            nixvim.homeModules.nixvim
             capybar.homeManagerModules.default
-            nixos-cursor.homeManagerModules.default
             sops-nix.homeManagerModules.sops
             commonHomeManager
             ./home-manager

@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   plugins = {
     cmp.filetype.typst = {
       sources = [
@@ -20,13 +20,6 @@ _: {
       settings = {
         formatterMode = "typstyle";
         exportPdf = "onType";
-      };
-    };
-
-    typst-preview = {
-      enable = true;
-      settings = {
-        open_cmd = "zathura";
       };
     };
   };

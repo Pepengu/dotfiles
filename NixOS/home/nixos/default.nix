@@ -5,8 +5,9 @@
     ./packages.nix
     ./printing.nix
     ./services.nix
+    ./zapret.nix
     ./desktop
   ];
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.05";
 }

@@ -6,4 +6,6 @@
     ./security.nix
     ./desktop
   ];
+
+  hardware.graphics.enable = true;
 }

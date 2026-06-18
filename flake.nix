@@ -7,7 +7,7 @@
 
   inputs = {
     # NixOS
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Desktop Environment
@@ -15,7 +15,7 @@
 
     # System Management
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -33,7 +33,7 @@
 
     # Applications
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-25.05";
+      url = "github:nix-community/nixvim/nixos-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -44,18 +44,23 @@
 
     capybar.url = "github:CapyCore/capybar/dev";
 
+    dank-material-shell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+    };
+
     prismlauncher = {
       url = "github:Diegiwg/PrismLauncher-Cracked";
     };
 
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+    };
+
+    tg-ws-proxy.url = "github:pialtor/tg-ws-proxy-flake";
+
     # Development Tools
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixos-cursor = {
-      url = "github:Distracted-E421/nixos-cursor";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -67,7 +72,6 @@
     capybar,
     zen-browser,
     prismlauncher,
-    nixos-cursor,
     sops-nix,
     ...
   } @ inputs: let
@@ -88,7 +92,7 @@
       configPath = configDir + "/${configName}";
       commonPath = configDir + "/common";
       config = import (configPath + "/default.nix") {
-        inherit home-manager nixpkgs zen-browser nixvim capybar nixos-cursor sops-nix inputs pkgs;
+        inherit home-manager nixpkgs zen-browser nixvim capybar sops-nix inputs pkgs;
         inherit commonPath;
       };
     in

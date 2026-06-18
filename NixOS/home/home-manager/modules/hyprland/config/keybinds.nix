@@ -19,7 +19,7 @@
 
     bind = [
       "$mainMod, S, exec, rofi -show drun -show-icons"
-      "$mainMod, B, exec, capybar toggle"
+      "$mainMod, B, exec, dms ipc call bar toggle id default"
       "$mainMod, T, exec, ghostty"
       "$mainMod, P, exec, hyprpicker"
       "$mainMod, K, killactive, "
@@ -32,38 +32,20 @@
       #Why it fixes it? No fucking clue.
       ", ALT, pass, class:^(vesktop)$"
     ] 
-    ++ (map (n: "$mainMod, ${n}, workspace, ${n}") workspaces) # Switch workpace
-    ++ (map (n: "$mainMod SHIFT, ${n}, movetoworkspace, ${n}") workspaces) # Move tab to workspace
-    ++ (lib.mapAttrsToList (key: direction: "$mainMod,${key}, movefocus,${direction}") directions) # Change focus
+    ++ (map (n: "$mainMod, ${n}, workspace, ${n}") workspaces)
+    ++ (map (n: "$mainMod SHIFT, ${n}, movetoworkspace, ${n}") workspaces)
+    ++ (lib.mapAttrsToList (key: direction: "$mainMod,${key}, movefocus,${direction}") directions)
     ;
 
-# Media Keys
-
-#    bindel = [
-#      ", XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-
-#        ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
-#        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-#        ", XF86AudioMicMute,     exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-#
-#        ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-#        ", XF86MonBrightnessUp,   exec, brightnessctl s 10%+"
-#    ];
-
-#swayosd version
         bindel = [
             ",XF86AudioRaiseVolume,exec,swayosd-client --output-volume raise"
             ",XF86AudioLowerVolume,exec,swayosd-client --output-volume lower"
-
             ",XF86AudioMute,exec,swayosd-client --output-volume mute-toggle"
-
             ",XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
-
             ",XF86MonBrightnessUp,exec,swayosd-client --brightness raise"
             ",XF86MonBrightnessDown,exec,swayosd-client --brightness lower"
         ];
 
-# Mouse keys
     bindm = [
       "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"

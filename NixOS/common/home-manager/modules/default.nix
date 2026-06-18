@@ -14,10 +14,12 @@ in
     ./terminal.nix
     ./git.nix
     ./gh.nix
+#    ./vscode.nix
     # ./secrets.nix  # Uncomment after setting up secrets (see secrets/README.md)
     ./theme.nix
     ./capybar.nix
     ./zen.nix
+    inputs.dank-material-shell.homeModules.dank-material-shell
   ];
 
   home.packages = with pkgs; [
@@ -25,10 +27,9 @@ in
     hyprpicker
     btop
     ripgrep
+    unzip
 
     google-chrome
-
-    vscode-fhs
 
     telegram-desktop
     vesktop
@@ -42,6 +43,8 @@ in
     thunderbird
     jre
 
+    xdg-utils
+
 # Fonts
     font-awesome
     iosevka
@@ -51,9 +54,15 @@ in
   ];
 
   programs = {
+    dank-material-shell = {
+      enable = true;
+      systemd.enable = false;
+      enableSystemMonitoring = false;
+      quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
+    };
   };
 
   services = {
-    swayosd.enable = true;
+    #swayosd.enable = true;
   };
 }

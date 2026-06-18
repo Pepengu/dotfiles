@@ -5,6 +5,6 @@
     isNormalUser = true;
     description = "Daniil";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "docker" "scanner" "lp"];
+    extraGroups = [ "networkmanager" "wheel" "docker" "scanner" "lp" "video" "render"];
   };
 }

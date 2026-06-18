@@ -1,7 +1,7 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   imports = [
-    #./sddm
     ./hyprland.nix
+    ./greetd.nix
     ./boot.nix
     ./networking.nix
     ./users.nix
