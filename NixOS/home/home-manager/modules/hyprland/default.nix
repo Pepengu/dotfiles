@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports =  [
-#    ./config
+    ./config
     ./hyprpaper.nix
 #    ./hyprpanel.nix
 #    ./hypridle.nix

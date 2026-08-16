@@ -15,6 +15,7 @@
         ts_ls.enable = true;
         nil_ls.enable = true;
         taplo.enable = true;
+        dockerls.enable = true;
       };
     };
 

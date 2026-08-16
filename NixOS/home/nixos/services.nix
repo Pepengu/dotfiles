@@ -12,5 +12,6 @@ in
       package = unstable.v2raya;
     };
     gvfs.enable = true;
+    qbittorrent.enable = true;
   };
 }

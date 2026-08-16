@@ -19,7 +19,6 @@ in
     ./theme.nix
     ./capybar.nix
     ./zen.nix
-    inputs.dank-material-shell.homeModules.dank-material-shell
   ];
 
   home.packages = with pkgs; [
@@ -52,15 +51,6 @@ in
     liberation_ttf
     open-sans
   ];
-
-  programs = {
-    dank-material-shell = {
-      enable = true;
-      systemd.enable = false;
-      enableSystemMonitoring = false;
-      quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
-    };
-  };
 
   services = {
     #swayosd.enable = true;

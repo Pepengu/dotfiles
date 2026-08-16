@@ -8,6 +8,7 @@ _: {
     ./dap.nix
     ./harpoon.nix
     ./competitest.nix
+    ./opencode.nix
   ];
 
   plugins = {

@@ -34,7 +34,6 @@
     # Applications
     nixvim = {
       url = "github:nix-community/nixvim/nixos-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     zen-browser = {
@@ -44,8 +43,9 @@
 
     capybar.url = "github:CapyCore/capybar/dev";
 
-    dank-material-shell = {
-      url = "github:AvengeMedia/DankMaterialShell";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     prismlauncher = {

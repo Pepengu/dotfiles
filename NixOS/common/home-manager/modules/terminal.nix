@@ -25,11 +25,32 @@
   if set -q TMUX
       set cmd "fzf-tmux -p 80%,60% --"
   end
-  set -l session (sesh l | eval $cmd | string trim)
-  if test -z "$session"
+  set -l selection (sesh l | eval $cmd | string trim)
+  if test -z "$selection"
       return
   end
-  sesh cn --switch $session
+  if test -f "$HOME/.config/tmuxinator/$selection.yml"
+      tmuxinator start "$selection"
+      if set -q TMUX
+          tmux switch-client -t "$selection" 2>/dev/null
+      end
+      return
+  end
+  if tmux has-session -t "$selection" 2>/dev/null
+      if set -q TMUX
+          tmux switch-client -t "$selection"
+      else
+          tmux attach-session -t "$selection"
+      end
+  else
+      set -l session_name (basename "$selection")
+      tmux new-session -d -s "$session_name" -c "$selection"
+      if set -q TMUX
+          tmux switch-client -t "$session_name"
+      else
+          tmux attach-session -t "$session_name"
+      end
+  end
 '';
       };
     };

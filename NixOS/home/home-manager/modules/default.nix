@@ -14,7 +14,8 @@ in
     ./obs.nix
     #./ashell.nix
     ./zed.nix
-    #./codex-ollama.nix
+    ./codex-ollama.nix
+    ./opencode.nix
   ];
 
   home.packages = with pkgs; [
@@ -23,7 +24,6 @@ in
 
     google-chrome
 
-    unstable.opencode
 #    unstable.code-cursor
 
     libreoffice
@@ -32,6 +32,7 @@ in
     ani-cli
     ani-skip
     jre
+    qbittorrent
     
     python3
     clang-tools
@@ -50,6 +51,10 @@ in
   ];
 
   programs = {
+  };
+
+  services = {
+    swayosd.enable = true;
   };
 
   xdg.dataFile = {

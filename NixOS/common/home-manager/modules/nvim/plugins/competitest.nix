@@ -17,6 +17,7 @@ _: {
           exec = "g++";
           args = [
             "-DLOCAL"
+              "-std=c++20"
               "$(FNAME)"
               "-o"
               "$(FNOEXT)"
